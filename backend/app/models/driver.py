@@ -22,10 +22,10 @@ class DriverProfile(db.Model):
     current_lat = db.Column(db.Float, nullable=True)
     current_lng = db.Column(db.Float, nullable=True)
     last_location_update = db.Column(db.DateTime, nullable=True)
-    
-    
-
-    
+     
+    total_trips = db.Column(db.Integer, default=0)
+    average_rating = db.Column(db.Float, default=0.0)
+    total_earnings = db.Column(db.Float, default=0.0)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
     def to_dict(self):
