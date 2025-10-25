@@ -16,7 +16,7 @@ def apply_as_driver():
     if user.role != 'driver':
         user.role = 'driver'
     
-   
+    data = request.get_json()
     
     driver_profile = DriverProfile(
         user_id=user_id,
